@@ -1,0 +1,49 @@
+{
+  "name": "deepcodex-deepseek-bridge",
+  "version": "1.0.0",
+  "description": "Minimal Node.js CLI and bridge for using DeepSeek with Codex CLI.",
+  "type": "module",
+  "main": "src/server.js",
+  "bin": {
+    "deepcodex": "src/cli.js",
+    "deepcodex-bridge": "src/server.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "cli": "node src/cli.js",
+    "bridge": "node src/server.js",
+    "build": "node scripts/build-package.js",
+    "build:app": "node scripts/build-app.js",
+    "setup": "node src/setup.js",
+    "models": "node src/list-models.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "codex",
+    "deepseek",
+    "responses-api",
+    "chat-completions",
+    "proxy"
+  ],
+  "author": "miloce",
+  "license": "MIT",
+  "homepage": "https://github.com/miloce/DeepCodex#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miloce/DeepCodex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/miloce/DeepCodex/issues"
+  },
+  "pkg": {
+    "assets": [
+      "src/cc-switch-model-catalog.json"
+    ]
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@yao-pkg/pkg": "^6.20.0"
+  }
+}
